@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Lab Loader</title>
+    <title>Remote Loader</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <style>
@@ -33,9 +33,9 @@
         }
 
         // poll URLs
-        function remote() {
+        function remoteLoader() {
           $.ajax({
-            url: 'remote-loader.html',
+            url: 'url.html',
             cache: false,
             timeout: 100000,
 
@@ -44,18 +44,18 @@
               if ($('iframe').attr('src') != data) {
                 $('iframe').attr('src', data);
               }
-              setTimeout(remote, 2000);
+              setTimeout(remoteLoader, 2000);
             },
 
             error: function (XMLHttpRequest, textStatus, errorThrown) {
               console.log('error', textStatus + ' (' + errorThrown + ')');
-              setTimeout(remote, 4000);
+              setTimeout(remoteLoader, 4000);
             }
           });
         }
 
         // Init once
-        remote();
+        remoteLoader();
 
       });
 
