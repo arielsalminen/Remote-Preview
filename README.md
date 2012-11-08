@@ -29,8 +29,9 @@ Current alpha version is tested to be working on at least following platforms:
 * If window.resize event is used on the page which gets loaded, RemoteLoader might make it trigger endlessly
 * On some platforms empty space is being added below the iFrame
 
-## Future improvements
+## TODO
 
+* Add a video demonstrating how the tool can be used
 * Get rid of most of the known bugs?
 * Add the possibility to use remote inspector on WebKit browsers to inspect the iframe's contents?
 
