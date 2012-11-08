@@ -40,21 +40,21 @@
               // Remove whitespace from the beginning and end
               var newUrl = $.trim(data);
 
-              // Check URL for errors
+              // Check URL against regexp and stop if false
               if (isUrl(newUrl) == false) {
                 console.log('error: Double check the URL, there seems to be some errors');
                 setTimeout(remoteLoader, 2000);
                 return;
               }
 
-              // If there is a new URL
+              // If there is a new valid URL
               if ($('iframe').attr('src') != newUrl) {
                 document.title = newUrl;
                 $('iframe').attr('src', newUrl);
                 console.log('loading: ' + newUrl);
               }
 
-              // Watch for URL changes
+              // Watch for changes
               setTimeout(remoteLoader, 2000);
             },
 
