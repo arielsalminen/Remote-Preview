@@ -11,6 +11,7 @@
         border: 0;
       }
       html,body {
+        background: #000;
         height: 100%;
       }
       iframe {
@@ -42,8 +43,8 @@
 
               // Check URL against regexp and stop if false
               if (isUrl(newUrl) == false) {
-                console.log('error: Double check the URL, there seems to be some errors');
-                setTimeout(remoteLoader, 2000);
+                setTimeout(remoteLoader, 1500);
+                console.log('error: there seems to be some errors in the URL');
                 return;
               }
 
@@ -51,16 +52,15 @@
               if ($('iframe').attr('src') != newUrl) {
                 document.title = newUrl;
                 $('iframe').attr('src', newUrl);
-                console.log('loading: ' + newUrl);
               }
 
               // Watch for changes
-              setTimeout(remoteLoader, 2000);
+              setTimeout(remoteLoader, 1500);
             },
 
             error: function(jqXHR, textStatus, errorThrown) {
-              console.log('error', textStatus + ' (' + errorThrown + ')');
-              setTimeout(remoteLoader, 3000);
+              setTimeout(remoteLoader, 2000);
+              console.log('error: ' + textStatus + ', ' + errorThrown);
             }
 
           });
