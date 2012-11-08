@@ -1,14 +1,13 @@
-# RemoteLoader
+# Remote Preview
 
-### RemoteLoader allows you to see any URL on all mobile test devices/browsers simultaneously. Just enter the URL into the file called 'url' and hit Cmd+S. New URL is then automatically loaded inside iFrame on each device. Built by [Viljami Salminen](http://twitter.com/viljamis) for the [Helsinki Device Lab](http://devicelab.fi).
+### Remote Preview allows you to preview any URL on large number of mobile devices/browsers simultaneously. Just enter the URL and hit Cmd+S and new URL gets automatically loaded inside iframe on each device. This tool works on platforms like Android, Blackberry, iOS, Maemo, Meego, Symbian, Windows Phone and WebOS. Built by [@viljamis](http://twitter.com/viljamis) for the [Helsinki Device Lab](http://devicelab.fi) for fast site previewing.
 
 ## Basic usage
 
-1. Run on your localhost + Make sure all test devices are using the same wireless network (alternatively you can run this on any server, when it won't matter which network your devices are using).
-2. Open remoteLoader from any browser/test device. You might want to bookmark this to your device's home screen for fast & easy access in the future.
-3. Next, open the file called `url` from the server which is running RemoteLoader, enter new URL, and Hit Cmd+S.
-4. All test devices should now start automatically loading the new URL.
-5. Repeat step 3 to load new url.
+1. Easiest way to get Remote Preview up and running is to switch on OS X's WebSharing and put these files in 'Sites' folder under your home directory. [Here's](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion) a good tutorial on how to config Apache on OS X 10.8 and [here's](http://clickontyler.com/blog/2012/02/web-sharing-mountain-lion/) even easier way to do it straight from the System Prefs.
+2. After you have the server running, you can open Remote Preview from any device/browser which is using the same wireless network. You might also want to bookmark Remote Preview to your device's home screen for fast & easy app like access.
+3. Once you have Remote Preview open in all your devices, open the file called `url` on the server, enter a new URL, and Hit Cmd+S.
+4. That's it. Repeat step 3 to refresh all connected devices.
 
 ## Browser support
 
@@ -26,16 +25,18 @@ Current alpha version is tested to be working on at least following platforms:
 * Windows Phone 7.5 (Default browser)
 * Windows 7 (IE9)
 
-## Known bugs
+## Known limitations
 
-* On Windows Phone 7.5 the iFrame's src attribute can't be empty. Otherwise the script doesn't load anything
-* If window.resize event is used on the page which gets loaded, RemoteLoader might make it trigger endlessly
-* On some platforms empty space is being added below the iFrame
+* Pages open inside iframe
+* You have to write the url with `http://` prefix
+* On Windows Phone 7.5 the iFrame's src attribute in the index.html file can't be empty
+* If window.resize event is used on the page which gets loaded, iframe might make it trigger endlessly on some platforms
+* On some platforms empty space is being added below the iframe
 
 ## TODO
 
 * Add a video demonstrating how the tool can be used
-* Get rid of most of the known bugs
+* Make browser extension/bookmarklet/something for easier access
 
 ## License
 

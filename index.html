@@ -30,7 +30,7 @@
         }
 
         // poll URLs
-        function remoteLoader() {
+        function remotePreview() {
           $.ajax({
             url: 'url',
             cache: false,
@@ -43,7 +43,7 @@
 
               // Check URL against regexp and stop if false
               if (isUrl(newUrl) == false) {
-                setTimeout(remoteLoader, 1500);
+                setTimeout(remotePreview, 1500);
                 console.log('error: there seems to be some errors in the URL');
                 return;
               }
@@ -55,18 +55,18 @@
               }
 
               // Watch for changes
-              setTimeout(remoteLoader, 1500);
+              setTimeout(remotePreview, 1500);
             },
 
             error: function(jqXHR, textStatus, errorThrown) {
-              setTimeout(remoteLoader, 2000);
+              setTimeout(remotePreview, 2000);
               console.log('error: ' + textStatus + ', ' + errorThrown);
             }
 
           });
         }
         // Init once
-        remoteLoader();
+        remotePreview();
       });
     </script>
   </head>
