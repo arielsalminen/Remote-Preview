@@ -1,8 +1,6 @@
 # RemoteLoader
 
-### RemoteLoader allows you to see any url on all test devices/browsers simultaneously. Just enter the url into the file called 'url' and hit Cmd+S.
-
-Built by [Viljami Salminen](http://twitter.com/viljamis).
+### RemoteLoader allows you to see any url on all test devices/browsers simultaneously. Just enter the url into the file called 'url' and hit Cmd+S. Built by [Viljami Salminen](http://twitter.com/viljamis) for the [Helsinki Device Lab](http://devicelab.fi).
 
 
 License
