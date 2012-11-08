@@ -1,6 +1,13 @@
 # RemoteLoader
 
-### RemoteLoader allows you to see any url on all test devices/browsers simultaneously. Just enter the url into the file called 'url' and hit Cmd+S. Built by [Viljami Salminen](http://twitter.com/viljamis) for the [Helsinki Device Lab](http://devicelab.fi).
+### RemoteLoader allows you to see any URL on all mobile test devices/browsers simultaneously. Just enter the URL into the file called 'url' and hit Cmd+S. New URL is then automatically loaded inside iFrame on each device. Built by [Viljami Salminen](http://twitter.com/viljamis) for the [Helsinki Device Lab](http://devicelab.fi).
+
+## Basic usage
+
+1. Run on your localhost + Make sure all the devices are using the same wireless network.
+2. Use your computer's IP to open remoteLoader on the test devices. You might also want to add this as a shortcut to your device's home screen for easy access in future.
+3. Next, open the file called `url` on the computer which is running the server and enter new URL + Hit `Cmd+S` (Save the file…).
+4. All your devices should now start automatically loading the new URL.
 
 ## Browser support
 
@@ -21,6 +28,11 @@ Current alpha version is tested to be working on at least following platforms:
 * On Windows Phone 7.5 the iFrame's src attribute can't be empty. Otherwise the script doesn't load anything
 * If window.resize event is used on the page which gets loaded, RemoteLoader might make it trigger endlessly
 * On some platforms empty space is being added below the iFrame
+
+## Future improvements
+
+* Get rid of most of the known bugs?
+* Add the possibility to use remote inspector on WebKit browsers to inspect the iframe's contents?
 
 ## License
 
