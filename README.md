@@ -2,9 +2,21 @@
 
 ### RemoteLoader allows you to see any url on all test devices/browsers simultaneously. Just enter the url into the file called 'url' and hit Cmd+S. Built by [Viljami Salminen](http://twitter.com/viljamis) for the [Helsinki Device Lab](http://devicelab.fi).
 
+## Browser support
 
-License
-======
+Current alpha version is tested to be working on at least following platforms:
+
+* Android OS 2.1 - 4.1.2 (Default browser + Chrome)
+* Blackberry OS 7.0 (Default browser)
+* iOS 4.2.1 - 6 (Default browser)
+* Mac OS X (Safari, Chrome, Firefox, Opera)
+* Meego 1.2 (Default browser)
+* Symbian 3 (Default browser)
+* WebOS 3.0.5 (Default browser)
+* Windows Phone 7.5 (Default browser)
+* Windows 7 (IE9)
+
+## License
 
 Licensed under the MIT license.
 
@@ -17,7 +29,6 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-Changelog
-======
+## Changelog
 
 `v0.1` (2012-11-8) - Release
