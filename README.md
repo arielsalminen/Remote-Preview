@@ -32,8 +32,7 @@ Current alpha version is tested to be working on at least following platforms:
 ## TODO
 
 * Add a video demonstrating how the tool can be used
-* Get rid of most of the known bugs?
-* Add the possibility to use remote inspector on WebKit browsers to inspect the iframe's contents?
+* Get rid of most of the known bugs
 
 ## License
 
