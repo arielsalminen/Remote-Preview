@@ -8,6 +8,7 @@
 2. Open remoteLoader from any browser/test device. You might want to bookmark this to your device's home screen for fast & easy access in the future.
 3. Next, open the file called `url` from the server which is running RemoteLoader, enter new URL, and Hit Cmd+S.
 4. All test devices should now start automatically loading the new URL.
+5. Repeat step 3 to load new url.
 
 ## Browser support
 
