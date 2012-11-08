@@ -16,6 +16,12 @@ Current alpha version is tested to be working on at least following platforms:
 * Windows Phone 7.5 (Default browser)
 * Windows 7 (IE9)
 
+## Known bugs
+
+* On Windows Phone 7.5 the iFrame's src attribute can't be empty. Otherwise the script doesn't load anything
+* If window.resize event is used on the page which gets loaded, RemoteLoader might make it trigger endlessly
+* On some platforms empty space is being added below the iFrame
+
 ## License
 
 Licensed under the MIT license.
