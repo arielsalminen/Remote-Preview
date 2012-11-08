@@ -5,31 +5,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <style>
-
       * {
         margin: 0;
         padding: 0;
         border: 0;
       }
-
       html,body {
         height: 100%;
       }
-
       iframe {
         width: 100%;
         height: 100%;
       }
-
     </style>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="jquery-1.8.2.min.js"></script>
     <script>
+      $(function() {
 
-      $(function () {
-
-        // Fix window.resize issues on iOS
-        if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
-          $('html,body').css('height', 'auto');
+        // Check if it's an URL
+        function isUrl(url) {
+          var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+          return regexp.test(url);
         }
 
         // poll URLs
@@ -38,30 +34,43 @@
             url: 'url',
             cache: false,
             timeout: 100000,
+            dataType: 'text',
 
-            success: function (data) {
-              if ($('iframe').attr('src') != data) {
-                $('iframe').attr('src', data);
-                console.log("Loading: " + data);
+            success: function(data) {
+              // Remove whitespace from the beginning and end
+              var newUrl = $.trim(data);
+
+              // Check URL for errors
+              if (isUrl(newUrl) == false) {
+                console.log('error: Double check the URL, there seems to be some errors');
+                setTimeout(remoteLoader, 2000);
+                return;
               }
+
+              // If there is a new URL
+              if ($('iframe').attr('src') != newUrl) {
+                document.title = newUrl;
+                $('iframe').attr('src', newUrl);
+                console.log('loading: ' + newUrl);
+              }
+
+              // Watch for URL changes
               setTimeout(remoteLoader, 2000);
             },
 
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
+            error: function(jqXHR, textStatus, errorThrown) {
               console.log('error', textStatus + ' (' + errorThrown + ')');
               setTimeout(remoteLoader, 3000);
             }
+
           });
         }
-
         // Init once
         remoteLoader();
-
       });
-
     </script>
   </head>
   <body>
-    <iframe src="http://opendevicelab.com" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+    <iframe src="http://Q5dRQiMro8GrKHIM.com" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
   </body>
 </html>
