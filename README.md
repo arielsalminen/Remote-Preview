@@ -18,9 +18,11 @@ Current alpha version is tested to be working on at least following platforms:
 * Blackberry OS 7.0 (Default browser)
 * iOS 4.2.1 - 6 (Default browser)
 * Mac OS X (Safari, Chrome, Firefox, Opera)
+* Maemo 5.0 (Default browser)
 * Meego 1.2 (Default browser)
 * Symbian 3 (Default browser)
-* WebOS 3.0.5 (Default browser)
+* Symbian Belle (Default browser)
+* WebOS 2.2.4 - 3.0.5 (Default browser)
 * Windows Phone 7.5 (Default browser)
 * Windows 7 (IE9)
 
