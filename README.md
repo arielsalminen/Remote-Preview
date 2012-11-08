@@ -4,10 +4,10 @@
 
 ## Basic usage
 
-1. Run on your localhost + Make sure all the devices are using the same wireless network.
-2. Use your computer's IP to open remoteLoader on the test devices. You might also want to add this as a shortcut to your device's home screen for easy access in future.
-3. Next, open the file called `url` on the computer which is running the server and enter new URL + Hit `Cmd+S` (Save the file…).
-4. All your devices should now start automatically loading the new URL.
+1. Run on your localhost + Make sure all test devices are using the same wireless network (alternatively you can run this on any server, when it won't matter which network your devices are using).
+2. Open remoteLoader on a test device. You might want to bookmark this to your device's home screen for fast & easy access in the future.
+3. Next, open the file called `url` from the server which is running RemoteLoader, enter new URL, and Hit Cmd+S.
+4. All test devices should now start automatically loading the new URL.
 
 ## Browser support
 
