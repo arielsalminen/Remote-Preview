@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Remote Loader</title>
+    <title>Remote</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <style>
@@ -40,9 +40,9 @@
             timeout: 100000,
 
             success: function (data) {
-              console.log("Loading: " + data);
               if ($('iframe').attr('src') != data) {
                 $('iframe').attr('src', data);
+                console.log("Loading: " + data);
               }
               setTimeout(remoteLoader, 2000);
             },
