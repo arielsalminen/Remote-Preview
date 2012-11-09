@@ -37,9 +37,9 @@ Current alpha version is tested to be working on at least following platforms:
 
 ## TODO
 
-* Add a video demonstrating of how the tool can be used
+* Add a video demonstrating how the tool can be used
 * Add a simple "remote" page for easier syncing and browsing
-* Fix issues
+* Fix some issues
 
 ## License
 
