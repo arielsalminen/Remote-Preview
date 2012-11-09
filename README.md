@@ -6,10 +6,11 @@ Remote Preview works by making an ajax call every 1.5 seconds to check if the ur
 
 ## Basic usage
 
-1. Easiest way to get Remote Preview up and running is to switch on OS X's WebSharing and put these files (index.html, jquery.js and url) in 'Sites' folder under your home directory. [Here's](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion) a good tutorial on how to config Apache on OS X 10.8 and [here's](http://clickontyler.com/blog/2012/02/web-sharing-mountain-lion/) even easier way to do it straight from the System Preferences.
+1. Switch on OS X's WebSharing and put these files (index.html, jquery.js and url) in 'Sites' folder under your home directory. [Here's](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion) a good tutorial on how to config Apache on OS X 10.8 and [here's](http://clickontyler.com/blog/2012/02/web-sharing-mountain-lion/) even easier way to do it straight from the System Preferences.
 2. After you have the server running, you can open Remote Preview from any device which is using the same wireless network. You can find your local IP address under System Preferences/Network. The URL where you have to connect, is something like http://192.168.1.5/~username/. You might also want to bookmark Remote Preview to your device's home screen for fast & easy application like access.
 3. Once you have Remote Preview open on all your devices, open the file called `url` on the server, enter a new URL, and Hit Cmd+S.
 4. That's it. Repeat step 3 to refresh all connected devices. It'll even update all your desktop browsers which are viewing the page.
+5.  Alternatively you can just copy these files to a public Dropbox folder, edit 'url' file locally and wait for devices to refresh.
 
 ## Browser support
 
