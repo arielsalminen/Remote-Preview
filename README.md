@@ -1,6 +1,6 @@
 # Remote Preview
 
-### Allows you to preview any URL on large number of mobile devices simultaneously. Just enter a URL, hit Cmd+S, and new URL gets automatically loaded on each device. Works on platforms like Android, Blackberry, iOS, Maemo, Meego, Symbian, Windows Phone and WebOS. It's built by [@viljamis](http://twitter.com/viljamis) for the [Helsinki Device Lab](http://devicelab.fi) for fast site previewing. 
+### Remote Preview allows you to preview any URL on large number of mobile devices simultaneously. Just enter a URL, hit Cmd+S, and new URL gets automatically loaded on each device. Works on platforms like Android, Blackberry, iOS, Maemo, Meego, Symbian, Windows Phone and WebOS. Built by [@viljamis](http://twitter.com/viljamis) for the [Helsinki Device Lab](http://devicelab.fi) for fast site previewing. 
 
 Remote Preview works by making an ajax call every 1.5 seconds to check if the url in the 'url' file is changed. If it is, the script will then change the src attribute of the iframe and load a new page into it. If there's no changes, the script will just keep polling the url file until something changes. Remote Preview allows very fast previewing of different URL's to check for possible layout problems, which can then be debugged using various other tools depending on the platform where they occur.
 
@@ -23,7 +23,7 @@ Current alpha version is tested to be working on at least following platforms:
 * Meego 1.2 (Default browser)
 * Symbian 3 (Default browser)
 * Symbian Belle (Default browser)
-* WebOS 2.2.4 - 3.0.5 (Default browser)
+* WebOS 3.0.5 (Default browser)
 * Windows Phone 7.5 (Default browser)
 * Windows 7 (IE9)
 
@@ -31,14 +31,15 @@ Current alpha version is tested to be working on at least following platforms:
 
 * Pages open inside iframe
 * You have to write the url with `http://` prefix
-* On Windows Phone 7.5 the iFrame's src attribute in the index.html file can't be empty
+* On Windows Phone 7.5 the iframe's src attribute can't be empty
 * If window.resize event is used on the page which gets loaded, iframe might make it trigger endlessly on some platforms
 * On some platforms empty space is being added below the iframe (layout seems to be unaffected though)
 
 ## TODO
 
-* Add a video demonstrating how the tool can be used
-* Make browser extension/bookmarklet/something for easier access(??)
+* Add a video demonstrating of how the tool can be used
+* Add a simple "remote" page for easier syncing and browsing
+* Fix issues
 
 ## License
 
