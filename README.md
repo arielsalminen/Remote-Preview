@@ -27,7 +27,7 @@ Current alpha version is tested to be working on at least following platforms:
 * Windows Phone 7.5 (Default browser)
 * Windows 7 (IE9)
 
-## Known limitations
+## Known issues
 
 * Pages open inside iframe
 * You have to write the url with `http://` prefix
