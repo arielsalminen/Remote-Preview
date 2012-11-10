@@ -44,7 +44,7 @@
 
               // Check URL against regexp and stop if false
               if (isUrl(newUrl) == false) {
-                setTimeout(remotePreview, 500);
+                setTimeout(remotePreview, 1500);
                 console.log('error: there seems to be some errors in the URL');
                 return;
               }
@@ -56,11 +56,11 @@
               }
 
               // Watch for changes
-              setTimeout(remotePreview, 500);
+              setTimeout(remotePreview, 1500);
             },
 
             error: function(jqXHR, textStatus, errorThrown) {
-              setTimeout(remotePreview, 1000);
+              setTimeout(remotePreview, 2000);
               console.log('error: ' + textStatus + ', ' + errorThrown);
             }
 
