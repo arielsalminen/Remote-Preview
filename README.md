@@ -1,6 +1,6 @@
 # Remote Preview
 
-### Remote Preview allows you to preview any URL on large number of mobile devices simultaneously. Just enter a URL, hit Cmd+S, and new URL gets automatically loaded on each device. Works on platforms like Android, Blackberry, iOS, Maemo, Meego, Symbian, Windows Phone and WebOS. Built by [@viljamis](http://twitter.com/viljamis) for the [Helsinki Device Lab](http://devicelab.fi) for fast site previewing. 
+### Remote Preview allows you to preview any URL on large number of mobile devices simultaneously. Just enter a URL, hit Cmd+S, and new URL gets automatically loaded on each device. Works on platforms like Android, Blackberry, iOS, Maemo, Meego, Symbian, Windows Phone and WebOS. Built by [@viljamis](http://twitter.com/viljamis) for the [Helsinki Device Lab](http://devicelab.fi) for fast site previewing. [Watch a video on Youtube](http://www.youtube.com/watch?v=_UjSot60apU) to see the tool in action.
 
 Remote Preview works by making an ajax call every 1500ms to check if the url in the 'url' file is changed. If it is, the script will then change the src attribute of the iframe and load a new page into it. If there's no changes, the script will just keep polling the url file until something changes. Remote Preview allows very fast previewing of different URL's to check for possible layout problems, which can then be debugged using various other tools depending on the platform where they occur.
 
@@ -38,7 +38,6 @@ Current alpha version is tested to be working on at least following platforms:
 
 ## TODO
 
-* Add a video demonstrating how the tool can be used
 * Add a simple "remote" page for easier syncing and browsing
 * Fix some issues
 
