@@ -2,7 +2,7 @@
 
 ### [Remote Preview](http://viljamis.com/blog/2012/remote-preview/) allows you to preview any URL on large number of mobile devices simultaneously. Just enter a URL, hit Cmd+S, and new URL gets automatically loaded on each device. Works on platforms like Android, Blackberry, iOS, Maemo, Meego, Symbian, Windows Phone and WebOS. Built by [@viljamis](http://twitter.com/viljamis) for the [Helsinki Device Lab](http://devicelab.fi) for fast site previewing. [Watch a video on Youtube](http://www.youtube.com/watch?v=-n64Cswel6o) to see the tool in action.
 
-Remote Preview works by making an ajax call every 1500ms to check if the url in the 'url' file is changed. If it is, the script will then change the src attribute of the iframe and load a new page into it. If there's no changes, the script will just keep polling the url file until something changes. Remote Preview allows very fast previewing of different URL's to check for possible layout problems, which can then be debugged using various other tools depending on the platform where they occur.
+Remote Preview works by making an ajax call every 1100ms to check if the url in the 'url' file is changed. If it is, the script will then change the src attribute of the iframe and load a new page into it. If there's no changes, the script will just keep polling the url file until something changes. Remote Preview allows very fast previewing of different URL's to check for possible layout problems, which can then be debugged using various other tools depending on the platform where they occur.
 
 ## Basic usage
 
@@ -33,8 +33,8 @@ Current alpha version is tested to be working on at least following platforms:
 * Pages open inside iframe
 * You have to write the url with `http://` prefix
 * On Windows Phone 7.5 the iframe's src attribute can't be empty
-* If window.resize event is used on the page which gets loaded, iframe might make it trigger endlessly on some platforms
-* On some platforms empty space is being added below the iframe (layout seems to be unaffected though)
+* On Android 4.0.4, when using Chrome browser, a fixed positioned element inside iframe seems to prevent the whole page's scrolling
+* On Android 2.1, when using default browser, the page stops auto updating after user scrolls down
 
 ## TODO
 
@@ -56,4 +56,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Changelog
 
+`v0.2` (2012-11-12) - Fixes some issues which where present in the initial release.
 `v0.1` (2012-11-8) - Release
