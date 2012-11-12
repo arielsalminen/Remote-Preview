@@ -56,5 +56,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Changelog
 
-`v0.2` (2012-11-12) - Fixes some issues which where present in the initial release.
+`v0.2` (2012-11-12) - Fixes some issues which where present in the initial release. 
+
 `v0.1` (2012-11-8) - Release
