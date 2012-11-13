@@ -1,6 +1,6 @@
 var remotePreviewURL = function(){
 	var pathArray = window.location.pathname.split( '/' );
-	var url = window.location.protocol "://" + window.location.host + "/" + pathArray[pathArray.length - 3];
+	var url = window.location.protocol + "//" + window.location.host + "/" + pathArray[pathArray.length - 3];
 	return url;
 };
 
@@ -11,7 +11,7 @@ var isUrl = function(url){
 
 var previewURL = function(){
 	$.ajax({
-        url: 'url',
+        url: '../url',
         cache: false,
         timeout: 100000,
         dataType: 'text',
@@ -25,32 +25,33 @@ var previewURL = function(){
 };
 
 var fh = {
-	error = '',
-	init = function(){
+	error: '',
+	init: function(){
 		$("#url-form").submit(function(e) {
-     	e.preventDefault();
-     	fh.resetForm();
-     	if(!fh.validate()) {
-	        fh.showError();
-	        return false;
-      	} else {
-	      $.ajax({
-			url: './update.php',
-			data: $('#url-form').serialize() + '&action=send',
-			type: 'post',
-			cache: false,
-			dataType: 'html',
-			success: function (data) {
-				$('.form-feedback').addClass('form-success').html(data).fadeIn(200);
+	     	e.preventDefault();
+	     	fh.resetForm();
+	     	if(!fh.validate()) {
+		        fh.showError();
+		        return false;
+	      	} else {
+		      $.ajax({
+				url: './update.php',
+				data: $('#url-form').serialize() + '&action=send',
+				type: 'post',
+				cache: false,
+				dataType: 'html',
+				success: function (data) {
+					$('.form-feedback').addClass('form-success').html(data).fadeIn(200);
+				}
+			  });
 			}
-		  });
-		}
+		});
 	},
-	resetForm = function(){
+	resetForm: function(){
 		$('.form-feedback').fadeOut(200).removeClass('form-success').removeClass('form-error').html();
 		fh.error = '';
 	},
-	validate = function(){
+	validate: function(){
 		if(!$("#url").val().length>0) {
 			fh.error = 'Looks like you forgot to enter a url';
 			return false;
@@ -63,7 +64,7 @@ var fh = {
 
 		return true;
 	},
-	showError = function(){
+	showError: function(){
 		$('.form-feedback').addClass('form-error').html(fh.error).fadeIn(200);
 	}
 };
