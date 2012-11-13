@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Remote Preview | Control</title>
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./styles/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+  		<div class="container">
+  			<h1>Remote Preview - Control</h1>
+  			<div class="form-feedback"></div>
+  			<form action="./update.php" method="post" id="url-form">
+  				<input type="text" name="url" id="url" placeholder="http://example.com">
+  				<button type="submit" name="update">Update URL</button>
+  			</form>
+  			<div class="instructions">
+  				<ol>
+  					<li>type a URL &amp; click on </li>
+  					<li>use http only</li>
+  					<li>point your devices to <span id="preview-url"></span></li>
+  					<li>profit!?</li>
+  				</ol>
+  			</div>
+  		</div>
+  </body>
+  <script src="../jquery.js"></script>
+  <script src="./js/script.js"></script>
+</html>
