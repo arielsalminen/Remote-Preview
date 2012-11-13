@@ -373,3 +373,37 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+/* ==========================================================================
+   ==========================================================================
+   ==========================================================================
+   CUSTOM STYLING STARTS HERE
+   ========================================================================== */
+   
+.floating {
+	margin: auto;
+	width: 35%;
+}
+
+.subcontainer {
+	padding: 1em 2em;
+}
+
+#url {
+	display: block;
+	margin: auto;
+	width: 100%;
+	font-size: 24px;
+	box-sizing: border-box;
+	margin: 0.6em auto 1em auto;
+}
+
+#urllabel {
+	display: block;
+	margin: auto;
+}
+
+.blue {color: #046fc2}
+
+
+

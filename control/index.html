@@ -8,24 +8,27 @@
 	<meta name="MSSmartTagsPreventParsing" content="true" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="./styles/style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
   </head>
 
   <body>
   		<div class="container">
-  			<h1>Remote Preview - Control</h1>
-  			<div class="form-feedback"></div>
-  			<form action="./update.php" method="post" id="url-form">
-  				<input type="text" name="url" id="url" placeholder="http://example.com">
-  				<button type="submit" name="update">Update URL</button>
-  			</form>
-  			<div class="instructions">
-  				<ol>
-  					<li>type a URL &amp; click on </li>
-  					<li>use http only</li>
-  					<li>point your devices to <span id="preview-url"></span></li>
-  					<li>profit!?</li>
-  				</ol>
+  			<div class="floating">
+	  			<h1>Remote Preview - Control</h1>
+				
+				<div class="subcontainer">
+					<h2>1) Point your devices at</h2>
+					<span id="preview-url"></span>
+				</div>
+				
+				<div class="subcontainer">		  			
+		  			<div class="form-feedback"></div>
+		  			<form action="./update.php" method="post" id="url-form">
+		  				<label for="url" id="urllabel">Enter URL to preview, including <span class="blue">http://</span></label>
+		  				<input type="text" name="url" id="url" placeholder="http://example.com">
+		  				<button type="submit" name="update">Refresh Devices</button>
+		  			</form>
+				</div>
   			</div>
   		</div>
   </body>
