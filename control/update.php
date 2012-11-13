@@ -6,10 +6,10 @@ if(!empty($_POST['url'])) {
 		$h = fopen($filename, 'w');
 		fwrite($h, $_POST['url']);
 		fclose($h);
-		echo "Go check your devices";
+		echo "Success! Go check your devices.";
 		exit;
 	} else {
-    	echo "The url file is not writable";
+    	echo "Error: The URL file is not writable.";
 	}
 }
 ?>
