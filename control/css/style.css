@@ -381,110 +381,110 @@ table {
    ========================================================================== */
 
 body {
-	background-color: #333;
-	font-size: 16px;
-	font-family: "Myriad Pro", "Myriad", helvetica, arial, sans-serif;
+  background-color: #333;
+  font-size: 16px;
+  font-family: "Myriad Pro", "Myriad", helvetica, arial, sans-serif;
 }
-   
+
 .floating {
-	margin: auto;
-	width: 40%;
-	min-width: 20em;
+  margin: auto;
+  width: 40%;
+  min-width: 20em;
 }
 
 h1 {
-	text-align: center;
-	color: #efefef;
+  text-align: center;
+  color: #efefef;
 }
 
 h2 {
-	font-size: 1.4em;
-	font-weight: normal;
+  font-size: 1.4em;
+  font-weight: normal;
 }
 
 .subcontainer {
-	padding: 1em 2em 2em 2em;
-	background-color: #efefef;
-	margin: 0 0 2em 0;
+  padding: 1em 2em 2em 2em;
+  background-color: #efefef;
+  margin: 0 0 2em 0;
 }
 
 #url {
-	display: block;
-	margin: auto;
-	width: 100%;
-	font-size: 24px;
-	box-sizing: border-box;
-	margin: 0.6em auto 1em auto;
-	padding: 0.3em 0.5em 0.2em 0.5em;
-	border: 2px solid #e0e0e0;
+  display: block;
+  margin: auto;
+  width: 100%;
+  font-size: 24px;
+  box-sizing: border-box;
+  margin: 0.6em auto 1em auto;
+  padding: 0.3em 0.5em 0.2em 0.5em;
+  border: 2px solid #e0e0e0;
 }
 
 #urllabel {
-	display: block;
-	margin: 1em auto;
+  display: block;
+  margin: 1em auto;
 }
 
 .blue {color: #046fc2}
 
 #preview-url {
-	font-size: 1.4em;
-	color: #046fc2;
-	word-wrap: break-word;	
+  font-size: 1.4em;
+  color: #046fc2;
+  word-wrap: break-word;	
 }
 
 #refresh {
-	background-color: #046fc2;
-	color: #efefef;
-	border: 0;
-	-o-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	padding: 0.5em 1em;
-	font-size: 1.2em;
+  background-color: #046fc2;
+  color: #efefef;
+  border: 0;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
 }
 
 #url:focus {
-	outline: -webkit-focus-ring-color auto 0;
-	border: 2px solid #3996dd;
+  outline: -webkit-focus-ring-color auto 0;
+  border: 2px solid #3996dd;
 }
 
 .form-feedback {
-	margin-bottom: 1em;
-	display: block;
-	font-size: 1.2em;
+  margin-bottom: 1em;
+  display: block;
+  font-size: 1.2em;
 }
 
 .form-success {
-	background-color: #b1d2fa;
-	padding: 0.4em 0.5em;
+  background-color: #b1d2fa;
+  padding: 0.4em 0.5em;
 }
 
 .form-error {
-	background-color: #ee9292;
-	padding: 0.4em 0.5em;
+  background-color: #ee9292;
+  padding: 0.4em 0.5em;
 }
 
 
 /* ==========================================================================
-   MQ layout break
-   ========================================================================== */
-   
+MQ layout break
+========================================================================== */
+
 @media only screen and (max-width: 65em) {
-	
-	.floating {
-		margin: auto;
-		width: 60%;
-	}
+
+  .floating {
+    margin: auto;
+    width: 60%;
+  }
 
 }
 
 @media only screen and (max-width: 43em) {
-	
-	.floating {
-		margin: auto;
-		width: 100%;
-	}
+
+  .floating {
+    margin: auto;
+    width: 100%;
+  }
 
 }
 
