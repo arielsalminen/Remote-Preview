@@ -53,12 +53,12 @@ var fh = {
 	},
 	validate: function(){
 		if(!$("#url").val().length>0) {
-			fh.error = 'Looks like you forgot to enter a url';
+			fh.error = 'Looks like you forgot to enter a URL...';
 			return false;
 		}
 
 		if(!isUrl($("#url").val())) {
-			fh.error = "Hmm, that doesn't look like a url";
+			fh.error = "Hmmm, that doesn't look like a URL!";
 			return false;
 		}
 
