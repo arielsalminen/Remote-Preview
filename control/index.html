@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Remote Preview | Control</title>
+    <meta http-equiv="imagetoolbar" content="false" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+  <div class="container">
+    <div class="floating">
+      <h1>Remote Preview - Control</h1>
+
+      <div class="subcontainer">
+        <h2>1) Point your devices at:</h2>
+        <span id="preview-url"></span>
+      </div>
+
+      <div class="subcontainer">
+        <form action="./update.php" method="post" id="url-form">
+          <label for="url" id="urllabel"><h2>2) Enter URL to preview, including <span class="blue">http://</span></h2></label>
+          <input type="text" name="url" id="url" placeholder="http://example.com">
+          <div class="form-feedback"></div>
+          <button type="submit" name="update" id="refresh">Refresh Devices</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </body>
+  <script src="../jquery.js"></script>
+  <script src="./js/script.js"></script>
+</html>
