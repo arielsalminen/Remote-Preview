@@ -7,23 +7,22 @@
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
-  <div class="container">
-    <div class="floating">
-      <h1>Remote Preview Controller</h1>
-      <div class="subcontainer">
-        <h2>1) Point your devices at:</h2>
-        <span id="preview-url"></span>
-      </div>
-      <div class="subcontainer">
-        <form action="./update.php" method="post" id="url-form">
-          <label for="url" id="urllabel"><h2>2) Enter URL to preview, including <span class="blue">http://</span></h2></label>
-          <input type="text" name="url" id="url" placeholder="http://example.com">
-          <div class="form-feedback"></div>
-          <button type="submit" name="update" id="refresh">Refresh Devices</button>
-        </form>
+    <div class="header">
+      <div class="wrapper">
+        <img src="./../apple-touch-icon-precomposed.png" width="46" height="46">
+        <h1>Remote Preview</h1>
       </div>
     </div>
-  </div>
+    <div class="wrapper content">
+      <h2>1) Point your devices to</h2>
+      <span id="preview-url"></span>
+      <form action="./update.php" method="post" id="url-form">
+        <label for="url" id="urllabel"><h2>2) Enter URL including <span class="blue">http://</span></h2></label>
+        <input type="text" name="url" id="url" placeholder="http://example.com">
+        <button type="submit" name="update" id="refresh">Preview</button>
+        <div class="form-feedback"></div>
+      </form>
+    </div>
   </body>
   <script src="../jquery.js"></script>
   <script src="./js/script.js"></script>
