@@ -10,6 +10,7 @@ Remote Preview works by making an ajax call every 1100ms to check if the url in 
 2. Bookmark Remote Preview to your devices’s home screen for fast & easy application like access later on.
 3. If you moved all files to a server or localhost, you can control the devices via web browser by pointing your browser to the directory called /control/.
 4. To make the Controller page work, you need to make sure that PHP is enabled on the server and that the url file has necessary write permissions. You should also limit the access to this page somehow as otherwise anyone can go to that url and control the devices.
+5. Use ID's to scroll down to a certain point on a page. URL#ID, for example: http://opendevicelab.com/#location
 
 ## Running on localhost
 
@@ -42,6 +43,7 @@ Current alpha version is tested to be working on at least following platforms:
 ## TODO
 
 * Make a browser extension for easier usage
+* Make it possible to remotely scroll the page up/down.
 * Fix some issues
 
 ## License
