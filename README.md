@@ -42,8 +42,11 @@ Current alpha version is tested to be working on at least following platforms:
 
 ## TODO
 
+* Get rid of jQuery dependency
+* Make a proper site for Remote Preview
 * Make a browser extension for easier usage
-* Make it possible to remotely scroll the page up/down.
+* Make it possible to remotely scroll the page up/down
+* Make it possible to remotely jump to any CSS selector
 * Fix some issues
 
 ## License
