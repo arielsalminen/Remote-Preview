@@ -40,7 +40,6 @@ Current alpha version is tested to be working on at least following platforms:
 
 ## TODO
 
-* Add a simple "remote" page for easier syncing and browsing
 * Make a browser extension for easier usage
 * Fix some issues
 
