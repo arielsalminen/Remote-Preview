@@ -6,11 +6,13 @@ Remote Preview works by making an ajax call every 1100ms to check if the url in 
 
 ## Basic usage
 
-1. Switch on OS X's WebSharing and put these files (index.html, jquery.js and url) in 'Sites' folder under your home directory. [Here's](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion) a good tutorial on how to config Apache on OS X 10.8 and [here's](http://clickontyler.com/blog/2012/02/web-sharing-mountain-lion/) even easier way to do it straight from the System Preferences.
-2. After you have the server running, you can open Remote Preview from any device which is using the same wireless network. You can find your local IP address under System Preferences/Network. The URL where you have to connect, is something like http://192.168.1.5/~username/. You might also want to bookmark Remote Preview to your device's home screen for fast & easy application like access.
-3. Once you have Remote Preview open on all your devices, open the file called `url` on the server, enter a new URL, and Hit Cmd+S.
-4. That's it. Repeat step 3 to refresh all connected devices. It'll even update all your desktop browsers which are viewing the page.
-5.  Alternatively you can just copy these files to a public Dropbox folder, edit 'url' file locally and wait for devices to refresh.
+1. Move all files to a public Dropbox folder/Server/localhost, edit ‘url’ file and wait for devices to refresh. That's all!
+2. Bookmark Remote Preview to your devices’s home screen for fast & easy application like access later on.
+3. If you moved all files to a server, you can control the mobile devices via web browser by pointing your browser to the directory called /control/ (make sure php is enabled on the server and that the url file has necessary permissions)
+
+## Running on localhost
+
+Check out this [tutorial](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion) on how to config Apache for OS X 10.8.
 
 ## Browser support
 
@@ -56,6 +58,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 ## Changelog
+
+`v0.3` (2012-11-14) - Adds controller which allows Remote Preview to be controlled via a web browser. Thank you [@sherred](https://github.com/sherred) and [Device Lab Edinburgh](http://www.devicelab.org)!
 
 `v0.21` (2012-11-13) - Adds icon for touch devices.
 
