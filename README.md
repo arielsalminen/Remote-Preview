@@ -6,7 +6,7 @@ Remote Preview works by making an ajax call every 1100ms to check if the url in 
 
 ## Basic usage
 
-1. Move all files to a public Dropbox folder/Server/localhost, edit ‘url’ file and wait for devices to refresh. That's all!
+1. Move all files to a public Dropbox folder/Server/localhost, edit ‘url’ file, hit Cmd+S (save…) and wait for devices to refresh. That's all!
 2. Bookmark Remote Preview to your devices’s home screen for fast & easy application like access later on.
 3. If you moved all files to a server or localhost, you can control the devices via web browser by pointing your browser to the directory called /control/.
 4. To make the Controller page work, you need to make sure that PHP is enabled on the server and that the url file has necessary write permissions. You should also limit the access to this page somehow as otherwise anyone can go to that url and control the devices.
