@@ -64,6 +64,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Changelog
 
+`v0.31` (2012-11-19) - Adds file extension for the 'url' file which allows Remote Preview to work on ISS too.
+
 `v0.3` (2012-11-14) - Adds controller which allows Remote Preview to be controlled via a web browser. Thank you [@sherred](https://github.com/sherred) and [Device Lab Edinburgh](http://www.devicelab.org)!
 
 `v0.21` (2012-11-13) - Adds icon for touch devices.
