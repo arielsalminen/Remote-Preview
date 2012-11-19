@@ -1,6 +1,6 @@
 <?php
 if(!empty($_POST['url'])) {
-  $filename = '../url';
+  $filename = '../url.txt';
   $pattern = "/(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/";
   if(is_writable($filename) && preg_match($pattern, $_POST['url']) == 1) {
     $h = fopen($filename, 'w');
