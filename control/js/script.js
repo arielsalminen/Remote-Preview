@@ -11,7 +11,7 @@ var isUrl = function (url) {
 
 var previewURL = function () {
   $.ajax({
-    url: '../url',
+    url: '../url.txt',
     cache: false,
     timeout: 100000,
     dataType: 'text',
