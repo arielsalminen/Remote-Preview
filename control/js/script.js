@@ -43,18 +43,18 @@ var fh = {
           cache: false,
           dataType: 'html',
           success: function (data) {
-            $('.form-feedback').addClass('form-success').html(data).fadeIn(200);
+            $('.form-feedback').addClass('form-success').text(data).fadeIn(200);
           }
         });
       }
     });
   },
   resetForm: function () {
-    $('.form-feedback').fadeOut(200).removeClass('form-success').removeClass('form-error').html();
+    $('.form-feedback').fadeOut(200).removeClass('form-success').removeClass('form-error').empty();
     fh.error = '';
   },
   validate: function () {
-    if (!($("#url").val().length > 0)) {
+    if ($("#url").val().length <= 0) {
       fh.error = 'Looks like you forgot to enter a URL...';
       return false;
     }
@@ -67,7 +67,7 @@ var fh = {
     return true;
   },
   showError: function () {
-    $('.form-feedback').addClass('form-error').html(fh.error).fadeIn(200);
+    $('.form-feedback').addClass('form-error').text(fh.error).fadeIn(200);
   }
 };
 
