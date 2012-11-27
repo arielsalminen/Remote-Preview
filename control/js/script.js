@@ -73,6 +73,11 @@ var fh = {
 
 $(function () {
   previewURL();
-  $("#preview-url").html(remotePreviewURL());
+  $("#preview-url").val(remotePreviewURL());
+  $('.select-copy').on('click', function () {
+    if (this.select) {
+      this.select();
+    }
+  });
   fh.init();
 });

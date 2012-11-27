@@ -92,11 +92,13 @@ input[type="text"]:focus {
   border: 1px solid #0175a4;
 }
 
+.clear { clear: both; }
+
 .blue { color: #0175a4 }
 
-#preview-url {
+.select-copy {
   color: #0175a4;
-  word-wrap: break-word;	
+  word-wrap: break-word;
 }
 
 button {
