@@ -3,7 +3,7 @@
   /**
    * Returns full url to the parent directory.
    */
-  var remotePreviewURL = function () {
+  function getRemotePreviewURL() {
     var path = window.location.pathname;
     // Account for different web server configurations.
     // Normalise to without trailing slash.
@@ -11,14 +11,14 @@
       path = path.slice(0, -1);
     }
     return window.location.protocol + '//' + window.location.host + path.split('/').slice(0, -1).join('/');
-  };
+  }
 
-  var isUrl = function (url) {
+  function isUrl(url) {
     var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
     return regexp.test(url);
-  };
+  }
 
-  var initUrlValue = function () {
+  function initUrlValue() {
     $.ajax({
       url: '../url.txt',
       cache: false,
@@ -29,69 +29,72 @@
         // Remove whitespace from the beginning and end
         var newUrl = $.trim(data);
         if (isUrl(newUrl)) {
-          $("#url").val(newUrl);
+          $('#url').val(newUrl);
         }
       }
     });
-  };
+  }
 
   var fh = {
-    error: '',
     init: function () {
-      $("#url-form").submit(function (e) {
+      $('#preview-url').val(getRemotePreviewURL());
+
+      initUrlValue();
+
+      $('.select-copy').on('click', function () {
+        if (this.select) {
+          this.select();
+        }
+      });
+
+      $('#url-form').off('submit').on('submit', function (e) {
         e.preventDefault();
         fh.resetForm();
-        if (!fh.validate()) {
-          fh.showError();
-          return false;
-        } else {
+        if (fh.validateForm()) {
           $.ajax({
             url: './update.php',
-            data: $('#url-form').serialize() + '&action=send',
+            data: $(this).serialize() + '&action=send',
             type: 'post',
             cache: false,
             dataType: 'text',
             success: function (data) {
-              $('.form-feedback').addClass('form-success').text(data).fadeIn(200);
+              fh.msgSuccess(data);
             },
             error: function (jqXhr) {
-              $('.form-feedback').addClass('form-error').text(jqXhr.responseText || 'Error: Request failed.').fadeIn(200);
+              fh.msgError(jqXhr.responseText || 'Error: Request failed.');
             }
           });
         }
       });
     },
     resetForm: function () {
-      $('.form-feedback').hide().removeClass('form-success').removeClass('form-error').empty();
-      fh.error = '';
+      fh.clearMsg();
     },
-    validate: function () {
-      if ($("#url").val().length <= 0) {
-        fh.error = 'Looks like you forgot to enter a URL...';
+    validateForm: function () {
+      var url = $('#url').val();
+      if (!url) {
+        fh.msgError('Looks like you forgot to enter a URL...');
         return false;
       }
 
-      if (!(isUrl($("#url").val()))) {
-        fh.error = "Hmmm, that doesn't look like a URL!";
+      if (!isUrl(url)) {
+        fh.msgError("Hmmm, that doesn't look like a URL!");
         return false;
       }
 
       return true;
     },
-    showError: function () {
-      $('.form-feedback').addClass('form-error').text(fh.error).fadeIn(200);
+    msgError: function (message) {
+      $('.form-feedback').removeClass('form-success').addClass('form-error').text(message).fadeIn(200);
+    },
+    msgSuccess: function (message) {
+      $('.form-feedback').removeClass('form-error').addClass('form-success').text(message).fadeIn(200);
+    },
+    clearMsg: function () {
+      $('.form-feedback').hide().removeClass('form-success form-error').empty();
     }
   };
 
-  $(function () {
-    initUrlValue();
-    $("#preview-url").val(remotePreviewURL());
-    $('.select-copy').on('click', function () {
-      if (this.select) {
-        this.select();
-      }
-    });
-    fh.init();
-  });
+  $(fh.init);
 
 }(jQuery));
