@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Remote Preview</title>
     <meta charset="utf-8">
-    <meta name="apple-mobile-web-app-title" content="Remote">
+    <title>Remote Preview</title>
+    <meta name="apple-mobile-web-app-title" content="Remote Preview">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
-    <script src="jquery.js"></script>
     <style>
       * {
         margin: 0;
         padding: 0;
         border: 0;
       }
-      html,body {
+      html, body {
         height: 100%;
       }
       body {
@@ -27,53 +26,57 @@
         top: 0;
       }
     </style>
+    <script src="jquery.js"></script>
     <script>
-      $(function () {
+      /*global $ */
 
-        // Check if it's an URL
-        function isUrl(url) {
-          var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-          return regexp.test(url);
-        }
+      /**
+       * Check if it's an URL.
+       * @return boolean
+       */
+      function isUrl(url) {
+        var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+        return regexp.test(url);
+      }
 
-        // poll URLs
-        function remotePreview() {
-          $.ajax({
-            url: 'url.txt',
-            cache: false,
-            timeout: 100000,
-            dataType: 'text',
+      // Poll URLs.
+      function remotePreview() {
+        $.ajax({
+          url: 'url.txt',
+          cache: false,
+          timeout: 100000,
+          dataType: 'text',
 
-            success: function (data) {
-              // Remove whitespace from the beginning and end
-              var newUrl = $.trim(data);
+          success: function (data) {
+            // Remove whitespace from the beginning and end
+            var newUrl = $.trim(data);
 
-              // Check URL against regexp and stop if false
-              if (isUrl(newUrl) === false) {
-                setTimeout(remotePreview, 1100);
-                console.log('error: there seems to be some errors in the URL');
-                return;
-              }
-
-              // If there is a new valid URL
-              if ($('iframe').attr('src') !== newUrl) {
-                $('iframe').attr('src', newUrl);
-              }
-
-              // Watch for changes
+            // Check URL against regexp and stop if false
+            if (!isUrl(newUrl)) {
               setTimeout(remotePreview, 1100);
-            },
-
-            error: function (jqXHR, textStatus, errorThrown) {
-              setTimeout(remotePreview, 2000);
-              console.log('error: ' + textStatus + ', ' + errorThrown);
+              console.log('error: there seems to be some errors in the URL');
+              return;
             }
 
-          });
-        }
-        // Init once
-        remotePreview();
-      });
+            // If there is a new valid URL
+            if ($('iframe').attr('src') !== newUrl) {
+              $('iframe').attr('src', newUrl);
+            }
+
+            // Watch for changes
+            setTimeout(remotePreview, 1100);
+          },
+
+          error: function (jqXHR, textStatus, errorThrown) {
+            /*jslint unparam: true */
+            setTimeout(remotePreview, 2000);
+            console.log('error: ' + textStatus + ', ' + errorThrown);
+          }
+
+        });
+      }
+
+      $(remotePreview);
     </script>
   </head>
   <body>
