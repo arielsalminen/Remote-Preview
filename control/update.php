@@ -8,8 +8,8 @@ if(!empty($_POST['url'])) {
     fclose($h);
     echo "Success! Go check your devices.";
     exit;
-  } else {
-    echo "Error: The URL file is not writable.";
   }
+  header('HTTP/1.0 400 Bad Request');
+  echo "Error: The URL file is not writable.";
+  exit( E_ERROR );
 }
-?>
