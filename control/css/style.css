@@ -96,7 +96,8 @@ input[type="text"]:focus {
 
 .blue { color: #0175a4 }
 
-.select-copy {
+input.select-copy {
+  width: 100%;
   color: #0175a4;
   word-wrap: break-word;
 }
