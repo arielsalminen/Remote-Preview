@@ -20,8 +20,7 @@ input {
   line-height: normal;
 }
 
-button,
-input[type="submit"] {
+button {
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -47,7 +46,7 @@ body {
   margin: 0 auto;
 }
 
-.wrapper.content {
+.content {
   margin: 4.5em auto 2em;
   overflow: hidden;
 }
@@ -66,16 +65,16 @@ h1 {
   font-size: 1.25em;
 }
 
-h2 {
+label {
+  display: block;
   margin: 1.5em 0 0.5em;
   font-size: 1.25em;
   font-weight: bold;
 }
 
-#url {
+input[type="text"] {
   float: left;
   display: block;
-  margin: auto;
   width: 69%;
   padding: 0.8em 0.5em;
   border: 1px solid #bbb;
@@ -88,19 +87,21 @@ h2 {
   box-sizing: border-box;
 }
 
-#urllabel {
-  display: block;
-  margin: 1em auto;
+input[type="text"]:focus {
+  outline: -webkit-focus-ring-color auto 0;
+  border: 1px solid #0175a4;
 }
+
+.clear { clear: both; }
 
 .blue { color: #0175a4 }
 
-#preview-url {
+.select-copy {
   color: #0175a4;
-  word-wrap: break-word;	
+  word-wrap: break-word;
 }
 
-#refresh {
+button {
   background-color: #0175a4;
   color: #fff;
   border: 1px solid transparent;
@@ -114,11 +115,6 @@ h2 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-#url:focus {
-  outline: -webkit-focus-ring-color auto 0;
-  border: 1px solid #0175a4;
 }
 
 .form-feedback {
