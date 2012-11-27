@@ -4,9 +4,13 @@
    * Returns full url to the parent directory.
    */
   var remotePreviewURL = function () {
-    var pathArray = window.location.pathname.split('/');
-    var url = window.location.protocol + "//" + window.location.host + "/" + pathArray[pathArray.length - 3];
-    return url;
+    var path = window.location.pathname;
+    // Account for different web server configurations.
+    // Normalise to without trailing slash.
+    if (path.slice(-1) === '/') {
+      path = path.slice(0, -1);
+    }
+    return window.location.protocol + '//' + window.location.host + path.split('/').slice(0, -1).join('/');
   };
 
   var isUrl = function (url) {
