@@ -1,6 +1,6 @@
 <?php
 
-$filename = dirname( __DIR__ ). '/url.txt';
+$filename = '../url.txt';
 $pattern = '/(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/';
 
 function err($msg) {
