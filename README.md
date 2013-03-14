@@ -16,9 +16,16 @@ Remote Preview works by making an ajax call every 1100ms to check if the url in 
 
 Check out this [tutorial](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion) on how to config Apache for OS X 10.8.
 
+
+## Chrome extension
+
+There's now an extension for Chrome, which, when turned on, auto sends every URL change to the controller (even the tab changes!). Right now you can install it by downloading this repository and dragging ‘extension.crx’ file to Chrome's extension settings page (remember to first turn on ‘developer mode’).
+
+Later on this extension will hopefully be available on Chrome Web Store for free.
+
 ## Browser support
 
-Current alpha version is tested to be working on at least following platforms:
+Current version is tested to be working on at least following platforms:
 
 * Android OS 2.1 - 4.1.2 (Default browser + Chrome)
 * Blackberry OS 7.0 (Default browser)
@@ -40,20 +47,11 @@ Current alpha version is tested to be working on at least following platforms:
 * On Android 4.0.4, when using Chrome browser, a fixed positioned element inside iframe seems to prevent the whole page's scrolling
 * On Android 2.1, when using default browser, the page stops auto updating after user scrolls down
 
-## TODO
-
-* Get rid of jQuery dependency
-* Make a proper site for Remote Preview
-* Make a browser extension for easier usage
-* Make it possible to remotely scroll the page up/down
-* Make it possible to remotely jump to any CSS selector
-* Fix some issues
-
 ## License
 
 Licensed under the MIT license.
 
-Copyright (c) 2011-2012 Viljami Salminen, http://viljamis.com/
+Copyright (c) 2012-2013 Viljami Salminen, Ben Lane
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -63,6 +61,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 ## Changelog
+
+`v0.5` (2013-03-14) - Chrome extension added. Thanks to [Ben Lane](http://twitter.com/the_ben_lane) and [e3 media](http://www.e3.co.uk).
 
 `v0.35` (2012-11-27) - Fixes few issues on the Controller page and adds better error messages. Also some refactoring to html/css/js/php. Thank you [@Krinkle](https://github.com/Krinkle)!
 
