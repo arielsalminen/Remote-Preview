@@ -21,7 +21,7 @@ Check out this [tutorial](http://coolestguyplanettech.com/downtown/install-and-c
 
 There's now an extension for Chrome, which, when turned on, auto sends every URL change to the controller (even the tab changes!). Right now you can install it by downloading this repository and dragging ‘extension.crx’ file to Chrome's extension settings page (remember to first turn on ‘developer mode’).
 
-Later on this extension will hopefully be available on Chrome Web Store for free.
+Later on this extension will hopefully be available on the Chrome Web Store too for free.
 
 ## Browser support
 
