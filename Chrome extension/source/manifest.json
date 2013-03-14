@@ -1,0 +1,19 @@
+{
+  "name": "Remote Preview",
+  "description": "Remote Preview allows to preview any URL on large number of mobile devices simultaneously",
+  "version": "0.1.2",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icon-enabled.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "background": { "scripts": ["background.js"] },
+  "permissions": [
+    "tabs", "http://*/*"
+  ],
+  "browser_action": {
+    "name": "Click to activate"
+  },
+  "options_page" : "options.html"
+}
