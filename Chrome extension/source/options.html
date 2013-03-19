@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Remote Preview Settings</title>
+  <title>Remote Preview settings</title>
   <style>
   body {
     font-family: sans-serif;
@@ -19,13 +19,14 @@
 </head>
 <body>
   <div class="box">
-    <h1>Remote Preview Settings</h1>
+    <h1>Remote Preview settings</h1>
     <div class="row cfx">
-      <label for="txtUrl">URL</label> <input type="text" id="txtUrl" class="txt"/>
+      <p>In order to make Remote Preview extension work, you need to enter the path to your update.php file on the server or localhost:</p>
+      <label for="txtUrl">url:</label> <input type="text" placeholder="http://example.com/remote/control/update.php" id="txtUrl" class="txt"/>
     </div>
     <br>
     <div id="status"></div>
-    <button id="save">Save</button>
+    <button id="save">Save settings</button>
   </div>
   <script src="options.js"></script>
 </body>
