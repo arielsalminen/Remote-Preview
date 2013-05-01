@@ -39,6 +39,20 @@
         return regexp.test(url);
       }
 
+      function isAndroidEmulator() {
+        return window.location.href.match('10.0.2.2');
+      }
+
+      function sanitizeUrl(url) {
+        var sanitizedUrl;
+        if(isAndroidEmulator() && url.match(/localhost/i)) {
+            sanitizedUrl = url.split('localhost').join('10.0.2.2');
+        } else {
+          sanitizedUrl = url;
+        }
+        return sanitizedUrl;
+      }
+
       // Poll URLs.
       function remotePreview() {
         $.ajax({
@@ -57,6 +71,8 @@
               console.log('error: there seems to be some errors in the URL');
               return;
             }
+
+            newUrl = sanitizeUrl(newUrl);
 
             // If there is a new valid URL
             if ($('iframe').attr('src') !== newUrl) {
