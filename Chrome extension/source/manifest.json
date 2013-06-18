@@ -1,8 +1,8 @@
 {
   "name": "Remote Preview",
   "description": "Remote Preview allows to preview any URL on large number of mobile devices simultaneously",
-  "version": "0.1.2",
-  "manifest_version": 3,
+  "version": "0.1.3",
+  "manifest_version": 2,
   "icons": {
     "16": "icon-enabled.png",
     "48": "icon-48.png",
