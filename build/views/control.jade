@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  .header
+    .wrapper
+      img(src='/images/apple-touch-icon-precomposed.png', width='46', height='46')
+      h1 Remote Preview Node
+  .wrapper.content
+    form#url-form(action='./update.php', method='post')
+      label(for='preview-url') 1) Point your devices to
+      input#preview-url.select-copy(type='text', spellcheck='false')
+      .clear
+      label(for='url')
+        | 2) Enter URL including
+        span.blue http://
+      input#url(type='text', name='url', placeholder='http://example.com')
+      button(type='submit') Preview
+      .form-feedback
+  script(src="/javascripts/control.js")
+
+
+    //- .header
+    //-   .wrapper
+    //-     img(src='/images/apple-touch-icon-precomposed.png', width='46', height='46')
+    //-     h1 Remote Preview
+    //- .wrapper.content
+    //-   form#url-form(action='/update', method='post')
+    //-     label(for='preview-url') 1) Point your devices to
+    //-     input#preview-url.select-copy(type='text', spellcheck='false')
+    //-     .clear
+    //-     label(for='url')
+    //-       | 2) Enter URL including
+    //-       span.blue http://
+    //-     input#url(type='text', name='url', placeholder='http://example.com')
+    //-     button(type='submit') Preview
+    //-     .form-feedback
+    //- script(src="/javascripts/control.js")

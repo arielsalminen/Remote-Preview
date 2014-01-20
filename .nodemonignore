@@ -1,0 +1,5 @@
+/node_modules/*
+/build/*
+.git/*
+!/Gruntfile.coffee
+!/package.json
