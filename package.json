@@ -1,0 +1,22 @@
+{
+  "name": "remote-preview-node",
+  "version": "0.0.1",
+  "description": "A node.js port of 'viljamis/Remote-Preview' ",
+  "dependencies": {
+    "jade": "~1.1.5",
+    "express": "~3.4.8"
+  },
+  "devDependencies": {
+    "grunt-contrib-connect": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.2",
+    "supertest": "~0.9.0",
+    "grunt-contrib-coffee": "~0.8.2",
+    "coffee-script": "~1.6.3",
+    "mocha": "~1.17.0"
+  },
+  "scripts":{
+    "start":"node build/app",
+    "test":"node_modules/mocha/bin/mocha"
+  }
+}

@@ -1,0 +1,167 @@
+/*body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}*/
+* {
+margin: 0;
+padding: 0;
+border: 0;
+}
+html, body {
+height: 100%;
+}
+body {
+position: relative;
+}
+iframe {
+position: absolute;
+height: 101.5%; /* Fixes the bottom margin on IE9 Mobile */
+width: 100%;
+left: 0;
+top: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: #fff;
+  color: #222;
+}
+
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  line-height: normal;
+}
+
+button {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+body {
+  font-size: 100%;
+}
+
+.header {
+  color: #fff;
+  background: #0175a4;
+  height: 3.4em;
+  padding: 0.5em 0 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.wrapper {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content {
+  margin: 4.5em auto 2em;
+  overflow: hidden;
+}
+
+img {
+  float: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+h1 {
+  float: left;
+  margin: 0 0 0 1em;
+  line-height: 2.3em;
+  font-size: 1.25em;
+}
+
+label {
+  display: block;
+  margin: 1.5em 0 0.5em;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  float: left;
+  display: block;
+  width: 69%;
+  padding: 0.8em 0.5em;
+  border: 1px solid #bbb;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  outline: -webkit-focus-ring-color auto 0;
+  border: 1px solid #0175a4;
+}
+
+.clear { clear: both; }
+
+.blue { color: #0175a4 }
+
+input.select-copy {
+  width: 100%;
+  color: #0175a4;
+  word-wrap: break-word;
+}
+
+button {
+  background-color: #0175a4;
+  color: #fff;
+  border: 1px solid transparent;
+  float: right;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0.8em 0;
+  width: 30%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-feedback {
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 1em;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-success {
+  background-color: #b1d2fa;
+  padding: 0.4em 0.5em;
+}
+
+.form-error {
+  background-color: #ee9292;
+  padding: 0.4em 0.5em;
+}
