@@ -60,6 +60,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Changelog
 
+`v0.6` (2014-09-19) - Removes sandboxing.
+
 `v0.5` (2013-03-14) - Chrome extension added. Thanks to [Ben Lane](http://twitter.com/the_ben_lane) and [e3 media](http://www.e3.co.uk).
 
 `v0.35` (2012-11-27) - Fixes few issues on the Controller page and adds better error messages. Also some refactoring to html/css/js/php. Thank you [@Krinkle](https://github.com/Krinkle)!
