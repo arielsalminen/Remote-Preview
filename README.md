@@ -1,6 +1,6 @@
 # Remote Preview
 
-### [Remote Preview](http://viljamis.com/blog/2012/remote-preview/) allows you to preview any URL on large number of mobile devices simultaneously. Just enter a URL, hit Enter, and the new URL gets automatically loaded on each device. Works on platforms like Android, Blackberry, iOS, Maemo, Meego, Symbian, Windows Phone and WebOS. Built by [@viljamis](http://twitter.com/viljamis) for the [Helsinki Device Lab](http://devicelab.fi) for fast site previewing. [Watch a video on Youtube](http://www.youtube.com/watch?v=7NvzRfyhd5Q) to see the tool in action.
+### [Remote Preview](https://arie.ls/2012/remote-preview/) allows you to preview any URL on large number of mobile devices simultaneously. Just enter a URL, hit Enter, and the new URL gets automatically loaded on each device. Works on platforms like Android, Blackberry, iOS, Maemo, Meego, Symbian, Windows Phone and WebOS. Built by [@ariel](https://social.design.systems/@ariel) for the [Helsinki Device Lab](http://devicelab.fi) for fast site previewing. [Watch a video on Youtube](http://www.youtube.com/watch?v=7NvzRfyhd5Q) to see the tool in action.
 
 Remote Preview works by making an ajax call every 1100ms to check if the url in the 'url.txt' file changed. If it did, the script will then change the src attribute of the iframe and load a new page into it. If there's no changes, the script will just keep polling the url.txt until something changes. Remote Preview allows very fast previewing of different URL's to check for possible layout problems, which can then be debugged using various other tools depending on the platform where they occur.
 
@@ -49,7 +49,7 @@ Current version is tested to be working on at least following platforms:
 
 Licensed under the MIT license.
 
-Copyright (c) 2012-2013 Viljami Salminen, Ben Lane
+Copyright (c) 2012-2023 Ariel Salminen, Ben Lane
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -79,4 +79,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Want to do a pull request?
 
-Great! New ideas are more than welcome, but please check the [Pull Request Guidelines](https://github.com/viljamis/Remote-Preview/wiki/Pull-Request-Guidelines) first before doing so.
+Great! New ideas are more than welcome, but please check the [Pull Request Guidelines](https://github.com/arielsalminen/Remote-Preview/wiki/Pull-Request-Guidelines) first before doing so.
